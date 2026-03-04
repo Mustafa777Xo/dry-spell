@@ -21,3 +21,4 @@ venv/
 .vscode/
 
 /data/raw/
+/data/processed/
