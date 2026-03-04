@@ -33,7 +33,7 @@ This layered structure reflects the physical processes underlying dry-spell form
 
 ### 1. Local Soil Water State
 
-5cm Soil Moisture (CFS)
+> 5cm Soil Moisture (CFS)
 
 **Definition**
 Volumetric soil moisture in the top ~5 cm of soil.
