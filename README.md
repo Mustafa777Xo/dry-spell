@@ -88,6 +88,24 @@ Validation strategy:
 
 This ensures realistic future generalization.
 
+## Decision-Oriented Summary
+
+This project produces a daily dry-spell risk signal designed for decision support, not just model accuracy. We prioritize avoiding missed dry-spell events because the cost of a missed warning is higher than a false alert in agricultural planning.
+
+- Validation window: 2017-2019 (time-aware split; no random shuffling)
+- Best model: Random Forest (balanced classes, threshold tuned for F1)
+- Validation performance (class 1): F1 0.48, precision 0.32, recall 1.00
+- Operational interpretation: The model captured all dry-spell events in recent years while keeping alerts to a manageable rate. Thresholds are adjustable to fit operational risk tolerance.
+
+## Operational Output
+
+The final output is a daily probability and alert label for the 2020-2025 test period:
+
+- File: `data/processed/test_predictions.csv`
+- Columns: `date`, `prob_dryspell`, `pred_label`
+
+This format enables straightforward integration into advisory workflows (e.g., trigger alerts when risk exceeds a policy threshold).
+
 ## Repository Structure
 
 ```
